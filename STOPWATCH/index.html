@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Web Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFsp
+d3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color: black">
+    <div class="container">
+        <h1 style="color:white; text-align:center">Stopwatch</h1><br><br><br><br><br><br>
+        <div class="stopwatch">
+            
+            <div class="bdr"></div>
+                <div class="content"> 
+            <span id="hours" class="text hr">00</span><label>hr</label>:
+            <span id="minutes" class="text min">00</span><label>min</label>:
+            <span id="seconds" class="text sec">00</span><label>sec</label>:
+            <span id="milliseconds" style="font-size:15px" class="text ms"> 00</span>
+            </div>
+        </div><br><br><br><br><br><br><br>
+        <div class="wrapper">
+        <div class="controls">
+            <button id="startStopBtn"  class="button"  style="font-weight: bold;">Start</button>
+        </div>
+        <div class="controls">
+            <button id="resetBtn" class="button" style="font-weight: bold;">Reset</button>
+        </div>
+        <div class=" controls laps">
+            <button id="lapBtn" class="button" style="font-weight: bold;">Lap</button>
+            
+        </div>
+        
+        
+    </div> 
+    <br>
+    <div class="scroll">
+        <table id="tablist_data" class="table table-success table-striped" >
+            
+        </table>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

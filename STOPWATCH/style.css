@@ -1,0 +1,169 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, rgb(93, 205, 240), rgb(206, 65, 235));
+    color: #333;
+    animation: backgroundAnimation 15s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, rgb(109, 233, 241), rgb(200, 86, 235)); }
+    50% { background: linear-gradient(135deg, rgb(131, 245, 235), rgb(173, 125, 236)); }
+    100% { background: linear-gradient(135deg, rgb(175, 106, 221), rgb(116, 49, 121)); }
+}
+
+.stopwatch {
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#lapsList {
+    list-style: none;
+    padding: 0;
+    color: azure;
+    text-align: center;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.wrapper {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+.list {
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table, .table td, .table th {
+    border-collapse: collapse;
+    border: 1px solid white;
+    color: black;
+    padding: 10px;
+}
+
+.table tr td:first-child {
+    width: 50px;
+}
+
+.bdr {
+    position: absolute;
+    height: 265px;
+    width: 265px;
+    display: inline-block;
+    border: 20px solid transparent;
+    background: linear-gradient(black, black) padding-box,
+                linear-gradient(to top, purple, indigo, blue, green, yellow, orange, red) border-box;
+    border-style: solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 5s linear infinite, pulse 2s infinite;
+}
+
+.content {
+    position: relative;
+    background-color: black;
+    padding: 10px 20px;
+    font-size: 24px;
+    z-index: 1;
+    border-radius: 10px;
+    animation: popIn 0.5s ease;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scroll {
+    height: 200px;
+    width: 500px;
+    overflow: auto;
+    margin-top: 20px;
+    border: 5px solid;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
